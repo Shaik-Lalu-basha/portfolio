@@ -25,7 +25,7 @@
   <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="css/main.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: iPortfolio
@@ -47,19 +47,16 @@
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="img/my-profile-img.jpg" alt=""> -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
       <h1 class="sitename">SHAIK LALU BASHA</h1>
     </a>
 
     <div class="social-links text-center">
-      <a href="https://twitter.com/yourprofile" class="twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="https://www.facebook.com/yourprofile" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.instagram.com/shaik.lalbasha.963?igsh=eDdpenlyam9obTVh" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="https://wa.me/+917993417685" class="whatsapp" target="_blank">
-  <i class="bi bi-whatsapp"></i>
-</a>
-
-      <a href="https://www.linkedin.com/in/yourprofile" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
       
     </div>
 
@@ -75,6 +72,45 @@
     </nav>
 
   </header>
+  
+  <script>
+    const confettiColors = ['#FFC700', '#FF0000', '#47B5FF', '#0FFF95', '#FC76A1'];
+
+    function createConfettiPiece() {
+      const confetti = document.createElement('div');
+      const size = Math.random() * 10 + 5;
+      confetti.style.position = 'fixed';
+      confetti.style.top = '-20px';
+      confetti.style.left = `${Math.random() * 100}vw`;
+      confetti.style.width = `${size}px`;
+      confetti.style.height = `${size}px`;
+      confetti.style.backgroundColor = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+      confetti.style.opacity = Math.random();
+      confetti.style.borderRadius = '50%';
+      confetti.style.pointerEvents = 'none';
+      confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear infinite`;
+
+      document.body.appendChild(confetti);
+
+      setTimeout(() => {
+        confetti.remove();
+      }, 5000);
+    }
+
+    setInterval(createConfettiPiece, 50);
+
+    const styleSheet = document.createElement('style');
+    styleSheet.type = 'text/css';
+    styleSheet.innerText = `
+      @keyframes fall {
+        to {
+          transform: translateY(100vh) rotate(${Math.random() * 360}deg);
+        }
+      }
+    `;
+    document.head.appendChild(styleSheet);
+  </script>
+
 
   <main class="main">
     <section id="hero" class="hero section dark-background">
@@ -104,6 +140,7 @@
             <div class="row">
               <div class="col-lg-6">
                 <ul>
+            
                   <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.escorttechhub.com</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 7993417685</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kurnool, India</span></li>
@@ -111,6 +148,7 @@
               </div>
               <div class="col-lg-6">
                 <ul>
+              
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>B.Tech</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>founder.escorttechhub@gmail.com</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
@@ -337,8 +375,183 @@
     
     </section>
     
-    <!-- /Resume Section -->
+    <!-- /Company Portfolio Section -->
+<section id="company-portfolio" class="portfolio">
+  <div class="container" data-aos="fade-up">
 
+    <header class="section-header">
+      <h2><b>My Company</b></h2>
+      <p>Explore the Vision, Mission, and Projects of ESCORT TECH HUB</p>
+    </header>
+
+    <div class="row gy-4 isotope-container align-items-center">
+
+      <!-- Company Image with Animated Frame -->
+      <div class="col-lg-5 col-md-6">
+        <div class="portfolio-content animated-frame h-100">
+          <img src="img/escort.png" class="img-fluid" alt="ESCORT TECH HUB">
+          <div class="portfolio-info">
+            <h4>ESCORT TECH HUB</h4>
+            <p>A tech hub focused on software development, technical events, and a platform for workshops, hackathons, and internships.</p>
+            <a href="img/escort.png" title="ESCORT TECH HUB" data-gallery="portfolio-gallery" class="glightbox preview-link">
+              <i class="bi bi-zoom-in"></i>
+            </a>
+            <a href="https://shaik-lalu-basha.github.io/ESCORT-TECH-HUB/" title="More Details" class="details-link">
+              <i class="bi bi-link-45deg"></i>
+            </a>
+          </div>
+        </div>
+      </div><!-- End Company Image -->
+
+      <!-- Company Details with Animated Frame -->
+      <div class="col-lg-7 col-md-6">
+        <div class="company-details animated-frame">
+          <h3 class="animated-text">Vision</h3>
+          <p>To revolutionize the tech education and event ecosystem by providing cutting-edge opportunities through workshops, hackathons, and internships.</p>
+          
+          <h3 class="animated-text">Mission</h3>
+          <p>To empower students and professionals with hands-on experience in the latest technologies, fostering innovation and collaboration.</p>
+          
+          <h3 class="animated-text">Motto</h3>
+          <p><strong>"Innovate, Collaborate, Elevate!"</strong></p>
+        </div>
+      </div><!-- End Company Details -->
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* General Section Styling */
+#company-portfolio {
+  background: linear-gradient(120deg, #149ddd, #16213e);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Animated Frame Design */
+.animated-frame {
+  border: 2px solid transparent;
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+  transition: all 0.5s ease-in-out;
+}
+
+.animated-frame::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  animation: frame-glow 2s infinite alternate ease-in-out;
+}
+
+@keyframes frame-glow {
+  from {
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+  }
+  to {
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Portfolio Image Hover Effect */
+.portfolio-content img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.portfolio-content:hover img {
+  transform: scale(1.1);
+}
+
+/* Portfolio Info Styling */
+.portfolio-info {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-content:hover .portfolio-info {
+  transform: translateY(0);
+}
+
+/* Company Details */
+.company-details {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  text-align: left;
+}
+
+/* Text Animation */
+.animated-text {
+  position: relative;
+  font-size: 24px;
+  font-weight: bold;
+  color: #f9f871;
+  text-transform: uppercase;
+}
+
+.animated-text::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #f9f871;
+  margin-top: 5px;
+  animation: underline-slide 1.5s infinite alternate;
+}
+
+@keyframes underline-slide {
+  from {
+    width: 50px;
+  }
+  to {
+    width: 100px;
+  }
+}
+
+/* Cursor Glow Effect */
+.portfolio:hover::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 200, 50, 0.8) 0%, rgba(255, 100, 50, 0.1) 80%);
+  animation: pop-blast 1s forwards ease-out;
+}
+
+@keyframes pop-blast {
+  0% { transform: scale(1) translate(-50%, -50%); opacity: 1; }
+  100% { transform: scale(5) translate(-50%, -50%); opacity: 0; }
+}
+</style>
+
+<script>
+  // Initialize AOS for scroll animations
+  AOS.init({
+    duration: 1200, // Animation duration
+    once: true // Whether animation should happen only once
+  });
+</script>
+
+    
     <!-- Portfolio Section -->
 <section id="portfolio" class="portfolio section light-background">
 
@@ -354,43 +567,64 @@
 
       <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
         <li data-filter="*" class="filter-active">All</li>
-        <li data-filter=".filter-app">App</li>
-        <li data-filter=".filter-product">Product</li>
-        <li data-filter=".filter-branding">Branding</li>
-        <li data-filter=".filter-books">Books</li>
+        <li data-filter=".filter-app">Projects</li>
+        <li data-filter=".filter-product">Certificates</li>
+        <li data-filter=".filter-branding">Achievements</li>
+        <!--<li data-filter=".filter-books">Books</li>-->
       </ul><!-- End Portfolio Filters -->
-
-      <!--<div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
+<
+      <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
         <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
           <div class="portfolio-content h-100">
-            <img src="img/portfolio/app-1.jpg" class="img-fluid" alt="DPDP-Antivirus">
+            <img src="img/portfolio.png" class="img-fluid" alt="Interactive Systems Design">
             <div class="portfolio-info">
-              <h4>DPDP-Antivirus</h4>
-              <p>A project focused on detecting and preventing dark patterns in web design through an innovative antivirus solution.</p>
-              <a href="img/portfolio/app-1.jpg" title="DPDP-Antivirus" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <h4>Portfolio</h4>
+              <p></p>
+              <a href="img/portfolio.png" title="Interactive Systems Design" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div>
         </div><!-- End Portfolio Item -->
-
-       <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
           <div class="portfolio-content h-100">
-            <img src="img/portfolio/product-1.jpg" class="img-fluid" alt="EOS for Life Line Alert">
+            <img src="img/ETH.png" class="img-fluid" alt="ESCORT TECH HUB">
+            <div class="portfolio-info">
+              <h4>ESCORT TECH HUB</h4>
+              <p>A tech hub focused on software development, technical events, and a platform for workshops, hackathons, and internships.</p>
+              <a href="img/ETH.png" title="Coding Bootcamps" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+    
+
+       <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <img src="img/EOS.png" class="img-fluid" alt="EOS for Life Line Alert">
             <div class="portfolio-info">
               <h4>EOS for Life Line Alert</h4>
               <p>A disaster management project focusing on early warning and communication for disaster resilience.</p>
-              <a href="img/portfolio/product-1.jpg" title="EOS for Life Line Alert" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="img/EOS.png" title="EOS for Life Line Alert" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div>
         </div><!-- End Portfolio Item -->
-
-        <!--<div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
           <div class="portfolio-content h-100">
-            <img src="img/portfolio/branding-1.jpg" class="img-fluid" alt="Smart India Hackathon">
+            <img src="img/DPDP.jpg" class="img-fluid" alt="DPDP-Antivirus">
             <div class="portfolio-info">
-              <h4>Smart India Hackathon</h4>
+              <h4>DPDP-Antivirus</h4>
+              <p>A project focused on detecting and preventing dark patterns in web design through an innovative antivirus solution.</p>
+              <a href="img/DPDP.jpg" title="DPDP-Antivirus" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+            </div>
+          </div>
+        </div><!-- End Portfolio Item -->
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+          <div class="portfolio-content h-100">
+            <img src="img/AI.png" class="img-fluid" alt="AI-Driven Neural Interface Non Verbal Communication">
+            <div class="portfolio-info">
+              <h4>AI-Driven Neural Interface Non Verbal Communication</h4>
               <p>First prize-winning project focused on creating solutions for improving disaster management during hackathons.</p>
               <a href="img/portfolio/branding-1.jpg" title="Smart India Hackathon" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
@@ -398,7 +632,7 @@
           </div>
         </div><!-- End Portfolio Item -->
 
-       <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+       <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
           <div class="portfolio-content h-100">
             <img src="img/portfolio/books-1.jpg" class="img-fluid" alt="Hackathon Projects">
             <div class="portfolio-info">
@@ -410,49 +644,67 @@
           </div>
         </div><!-- End Portfolio Item -->
 
-       <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-          <div class="portfolio-content h-100">
-            <img src="img/portfolio/app-2.jpg" class="img-fluid" alt="Interactive Systems Design">
-            <div class="portfolio-info">
-              <h4>Interactive Systems Design</h4>
-              <p>Design and development of interactive systems for seamless user experiences in technical workshops and events.</p>
-              <a href="img/portfolio/app-2.jpg" title="Interactive Systems Design" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-              <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-            </div>
-          </div>
-        </div><!-- End Portfolio Item -->
+        
 
-       <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+       <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
           <div class="portfolio-content h-100">
-            <img src="img/portfolio/product-2.jpg" class="img-fluid" alt="Workshop Platforms">
+            <img src="img/disney.png" class="img-fluid" alt="Workshop Platforms">
             <div class="portfolio-info">
-              <h4>Workshop Platforms</h4>
+              <h4>Disney Plus</h4>
               <p>Developing platforms to support the hosting and management of workshops, webinars, and technical events for diverse audiences.</p>
-              <a href="img/portfolio/product-2.jpg" title="Workshop Platforms" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="img/disney.png" title="Workshop Platforms" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div>
         </div><!-- End Portfolio Item -->
 
-       <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
           <div class="portfolio-content h-100">
-            <img src="img/portfolio/branding-2.jpg" class="img-fluid" alt="Coding Bootcamps">
+            <img src="img/hotel.png" class="img-fluid" alt="Workshop Platforms">
             <div class="portfolio-info">
-              <h4>Coding Bootcamps</h4>
-              <p>Organizing coding bootcamps to train the next generation of developers and enhance their skills in web development and problem-solving.</p>
-              <a href="img/portfolio/branding-2.jpg" title="Coding Bootcamps" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <h4>Hotel Menu</h4>
+              <p>Sameer Family Resturant.</p>
+              <a href="img/hotel.png" title="Workshop Platforms" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
             </div>
           </div>
         </div><!-- End Portfolio Item -->
+
+       
 
         <!-- Additional portfolio items can be added as needed -->
 
       </div><!-- End Portfolio Container -->
 
     </div>
-
-  </div>
+    <style>
+      .frame {
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+      }
+    
+      .frame:hover {
+        transform: scale(1.05);
+      }
+    
+      .fixed-size {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+    
+      .portfolio-info {
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+    
+  
+  
 
 </section><!-- /Portfolio Section -->
 
@@ -632,6 +884,7 @@
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
 
   <!-- Preloader -->
   <div id="preloader"></div>
