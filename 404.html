@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found</title>
+    <meta name="theme-color" content="#06131f" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(180deg, #06131f 0%, #0c1f2d 100%);
+        font-family: "Inter", sans-serif;
+        color: #ebf3ff;
+      }
+      .box {
+        max-width: 520px;
+        padding: 2rem;
+        border: 1px solid rgba(148, 168, 188, 0.2);
+        border-radius: 22px;
+        background: rgba(12, 24, 35, 0.8);
+        text-align: center;
+      }
+      h1 { font-size: clamp(3rem, 10vw, 5rem); margin: 0 0 0.7rem; }
+      p { color: #9db2c7; line-height: 1.7; }
+      a {
+        display: inline-block;
+        margin-top: 0.8rem;
+        padding: 0.8rem 1.3rem;
+        border-radius: 999px;
+        text-decoration: none;
+        background: linear-gradient(135deg, #38bdf8, #79dcff);
+        color: #06131f;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>404</h1>
+      <p>The page you are looking for is unavailable or has moved. Head back to the portfolio homepage.</p>
+      <a href="/">Go Home</a>
+    </div>
+  </body>
+</html>
